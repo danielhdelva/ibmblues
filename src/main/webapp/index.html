@@ -1,0 +1,2272 @@
+
+<!DOCTYPE html>
+
+<html ng-app="Skills">
+
+<head>
+<title>Java Web Starter Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="survey.css">
+
+<script data-require="angular.js@*" data-semver="2.0.0" src="https://code.angularjs.org/1.4.8/angular.js
+"></script>
+    <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript" src="angular.js"></script>
+
+
+
+
+
+</head>
+
+
+
+<body >
+
+
+
+<div  ng-controller="SkillCtrl">
+
+ <img src="application dev.jpg"> </br></br></br>
+
+<table >
+<tr>
+<form name="loginForm" method="post" action="surveyaccess">
+<td ><b>Employee Name:</b> &nbsp; </td>
+<td><input type="text" name="ename" ng-model='EN'  ></td>
+
+<td><b>Employee ID:</b>  &nbsp; </td>
+<td><input type="text"   name="eID" ng-model="EID"></td>
+</tr>
+
+
+<tr>
+<td>
+<b>Band:</b>
+</td>
+<td>
+<input type="text"  name="Band" ng-model='Bd'>
+</td>
+
+<td>
+<b>Service Line:  &nbsp;</b>
+</td>
+<td> <input type="text" name="SL" ng-model='srl'> </td>
+</tr>
+
+
+<tr>
+<td>
+<b>Bluepages Manager Name: &nbsp;</b>
+</td>
+<td>
+<input type="text" name="BMN" ng-model='BM'>
+</td>
+
+<td>
+<b>Service Area:  &nbsp;</b>
+</td>
+<td> <input type="text" name="SA" ng-model='SM'> </td>
+
+
+
+
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+<br>
+ <b><u>ACTION REQUIRED:</u></b> Complete the following SEAT Talent Skill Assessment and Submit by <b>May 4th, 2015. <b> 
+
+<br>
+<p> Please email any questions to "AIS Public Sector Talent/Arlington/IBM"</p>
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<div>
+
+<br>
+ 
+<table>
+<tr>
+<td>
+Primary Job Role
+</td>
+<td> <input type="text" ng-model='role' size="30" name="PR" > </td>
+</tr>
+<tr id='plane'><td><br></td> <td><br></td> </tr>
+<tr>
+<th  id = "header">
+<b >Test Planning and Execution</b>
+</th>
+<th id = "header">
+</th>
+
+
+</tr>
+
+<tr>
+<td>
+Test script creation
+
+</td>
+
+
+<td>
+
+<select ng-model="SelectedNameRow1" name="tscript" ng-options="x for x in names" style="width: 200px;"  >
+</select>
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>
+ Test data creation
+
+</td>
+
+
+
+<td width="10%">
+
+<select  ng-model="SelectedNameRow2"  name="tdata" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+
+</tr>
+
+<tr>
+<td>
+Execute test scripts
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow3" name="ExecuteTest" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+
+
+
+
+
+</tr>
+
+<tr>
+<td>
+Write defects
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow4" name="WriteDefects" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+<td>
+ Effectively communicate to stakeholders/client
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow5"  name="Effectivelycommunicate"  ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>
+ Use of HP Application Lifecycle Management (ALM)
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow6" name="UseofHPApplication" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td>
+ Use of Rational ClearCase and ClearQuest
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow7" name="UseofRational" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+<td>
+ Use of Rational Collaborative Life cycle Management (CLM) product
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow8" name="Use_of_Rational_Collaborative" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td>
+Use of Rational Doors
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow9" name= "UseofDoors" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+<td>
+ Use of Rational Manual Tester
+
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow10" name= "UseofRationalManual" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+<tr>
+<td>
+   Use of Rational Quality Manager
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow11" name="QualityManager" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<td>
+Use of Rational Requirements Composer
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow12" name="UseofRationalRequirementsComposer" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+<tr>
+<td>  Use of Rational RequisitePro
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow13" name="UseOfRationalRPro" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+<tr>
+<td>  Use of Rational Software Architect Design Manager
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow14" name="Usadm"   ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+<tr>
+<td>   Use of Rational Team Concert
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow15" name="useteamc" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<td>    Use Rational TestManager
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow16" name="Use_Rational_TestManager" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<td>   Continuos Integration/Continuous Testing
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow17" name= "Continuos_Integration_Continuous_Testing" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+<td>   Test-driven development (TDD)/Behavior-driven development (BDD)
+</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow18" name="TDD"  ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th id = "header">      <b>Test Leadership and Teamwork</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>      Test Architect/Technical Leadership </td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow23" name= "TestArch" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>     Create test plan</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow24" name="Createtestplan" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>    Create test data plan</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow25" name= Create_test_data_plan ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+<tr><td>    Create test schedule</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow26" name="Create_test_schedul" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+</tr>
+
+<tr>
+<td>   Review and track test team schedule/progress</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow27" name=Review_and_track ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>   Resource onboarding</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow28" name="Resource_onboarding" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>  Create and present test status and reports to key
+stakeholders</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow29" name="Create_and_present_test_s" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td>   Prepare/Analyze test metrics</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow30" name="Prepare_Analyze_test_metrics" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+<tr>
+<td>  Perform defect management</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow31" name="Perform_defect_management" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td>  Create test estimates and budgets</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow32" name="creattestestimates" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td>  Perform cost accounting and provide status</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow33" name="performcostaccounting" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>  Agile SCRUM Master experience</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow34" name="Agile_SCRUM_Master_experience" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td> Consult on test solutions</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow35" name="Consult_on_test_solutions" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<th id = "header">      <b>Business Development</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>      Experience (in Yrs) with Software Dev Methodology (SDLC, Agile/SCRUM/Kanban/Iterative) </td>
+
+
+
+<td>
+<select ng-model="SelectedYearsRow36" name= "einyrsws" ng-options="x for x in years" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>     Participate in and support test assessments</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow37" name="Participate_in_and_support" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>     Lead test assessments</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow38" name="Lead_test_assessments" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+<tr><td>    Experience (in Yrs) testing using accelerators like CTD (Combinatorial Test Design) , DAC, CT</td>
+
+
+
+<td>
+
+<select ng-model="SelectedYearsRow39" name="testing_using_accelerators" ng-options="x for x in years" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+</tr>
+
+<tr>
+<td>    Conduct data analytics study</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow40" name="conductdataana" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td>  Support troubled test programs</td>
+
+
+
+<td>
+
+<select  name="Support_troubled_test_programs" ng-model="SelectedNameRow41" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>   Develop Test proposals</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow42" name="Develop_Test_proposals" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+<tr>
+<th id = "header">      <b>Automated Testing and Related Tools</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>      Build test automation frameworks </td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow43" name="Build_test_automation" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>     Lead test automation efforts</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow44" name="LeadTestA" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+
+</tr>
+<tr>
+<td>    Design test automation scripts</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow45" name="Design_test_automation_scripts" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+<tr><td>    Knowledge of Programming Languages</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow46" name="Knowledge_of_Programming_Languages" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+</tr>
+
+<tr>
+<td>   Write performance testing scripts</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow47" name="Write_performance_testing_scripts" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>  Rational Functional Tester</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow48" name="Rational_Functional_Tester" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> IBM ATA (Automating Test Automation)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow49" name="IBM_ATA_Automating_Test_Automation" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td> QA Partner</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow50" name="QA_Partner" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+<tr>
+<td> HP Quality Center (QC)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow51" name="HP_Quality_Center_QC" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> HP WinRunner</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow52" name="HP_WinRunner" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+<tr>
+<td>  HP Unified Functional Testing (UFT)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow53" name="HP_Unified_Functional_Testing_UFT" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+</tr>
+
+
+
+<tr>
+<td> HP QuickTest Pro (QTP)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow54" name=HP_QuickTest_Pro_QTP  ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td> Silk Test</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow55" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> Selenium IDE (Integrated Development Environment)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow56"  name="Selenium_IDE_Integrated_Development_Environment" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>Selenium RC/WebDriver</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow57" name="Selenium_RC_WebDriver" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th id = "header">      <b>Performance Testing and Related Tools</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>     Build performance testing frameworks </td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow58" name="Build_performance_testing_frameworks" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+</tr>
+
+<tr>
+<td>     Lead performance testing efforts (Run test planning session, create Performance Test Plan)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow59" name="leadperformancetest" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>    Design performance testing scripts</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow60" name="Design_performance_testing_scripts" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+</tr>
+
+
+<tr><td>    Knowledge of Programming Languages</td>
+
+
+
+<td>
+<select  ng-model="SelectedNameRow61" name="Knowledge_of_Programming_Languagestwo" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+
+</td>
+
+
+</tr>
+
+<tr>
+<td>   Write performance testing scripts</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow62" name="Write_performance_testing_scriptstw0" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> Rational Performance Tester</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow63" name="Rational_Performance_Tester0" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> HP Quality Center LoadRunner</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow64" name="HP_Quality_Center_LoadRunner" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td> HP Performance Center</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow65" name="HP_Performance_Center" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td> Silk Performer</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow66" name="Silk_Performer" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+</tr>
+
+<tr>
+<td> Apache Jmeter</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow67" name="Apache_Jmeter" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+</tr>
+
+<tr>
+
+<td> Parasoft SOAtest</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow68" name="Parasoft_SOAtest" ng-options="x for x in names" style="width: 200px;">
+</select>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+<th id = "header">      <b>CAMMS Testing</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>     Perform mobile application testing </td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow68" name="Perform_mobile_application_testing" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+</tr>
+
+<tr>
+<td>     Perform security testing</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow69" name="Perform_security_testing" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>  Perform data analytics testing</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow70" name="Perform_data_analytics_testing" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+<tr>
+<td>   Perform testing in the Cloud</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow71" name="Perform_testing_in_the_Cloud" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td>   Perfrom Agile testing</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow72" name="Perfrom_Agile_testing" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+<th id = "header">      <b>Other Tools Experience</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>     Junit/TestNG/Java</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow73" name="Junit_TestNG_Java" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+</tr>
+
+<tr>
+<td>     Cucumber/Celerity</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow74" name="Cucumber_Celerity" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>  508 Testing tools - JAWS</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow75" name="508_Testing_tools_JAWS" ng-options="x for x in names "  style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+<tr>
+<td>   508 Testing tools - Dragon</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow76"  name ="_508_Testing_tools_Dragon" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>   508 Testing tools - Zoomtext</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow77" ng-options="x for x in names" name="_508_Testing_tools_Zoomtext" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>   508 Testing tools - Compliance Sheriff</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow78" name="_508_Testing_tools_Compliance_Sheriff" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>508 Testing tools - Object Inspector</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow79" name="_508_Testing_tools_Object_Inspector" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>508 Testing tools - Java Ferret</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow80" name="_508_Testing_tools_Java_Ferret" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>508 Testing tools - Web Accessibility Toolbar (WAT)</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow81" name="_508_Testing_tools_Web_Accessibility_Toolbar_WAT" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<td>508 Testing tools - Adobe Acrobat Pro (PDF)</td>
+
+
+<td>
+
+<select  ng-model="SelectedNameRow82" name="_508_Testing_tools_Adobe_Acrobat_Pro_PDF" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td>IA Tool Scan - FortiFy</td>
+
+
+<td>
+
+<select  ng-model="SelectedNameRow83" name ="IA_Tool_Scan_FortiFy" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+<td>IA Tool Scan - AppScan</td>
+
+
+<td>
+
+<select  ng-model="SelectedNameRow84" name="IA_Tool_Scan_AppScan" ng-options="x for x in names" style="width: 200px;" >
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+<tr>
+<td>
+
+
+<td>
+
+<select  ng-model="SelectedNameRow85" name="_Knowledge_of_Programming_Languages" ng-options="x for x in language" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+<td>Java/J2EE, .Net, Perl, Python, Shell Scripting, Power Shell, SQL
+
+
+<td>
+
+<select  ng-model="SelectedNameRow86" name="javajee" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td>   List other tools that you may have used</td>
+
+
+
+<td>
+
+<INPUT    ng-model="othertools"  style="height:60px;font-size:14pt" />
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<th id = "header">      <b>Industry Knowledge</b>
+</th>
+
+
+
+
+<td id = "header">
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr>
+<td>     Retail</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow87" name="Retail" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+<tr>
+<td>     Manufacturing</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow88" name="Manufacturing" ng-options="x for x in names " style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+</tr>
+<tr>
+<td>  Health Care</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow89" name="Health_Care" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+<tr>
+<td>   Transportation</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow90" name="Transportation" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+<tr>
+<td>   Banking</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow91" name="Banking" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+</tr>
+<tr>
+<td>   Finance</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow92" name="Finance" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td>   Government</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow93" name="Government" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+<tr>
+<td>  Current Clearance(s) status</td>
+
+
+
+<td>
+
+<select  ng-model="SelectedNameRow94" name="Current_Clearance_s_status" ng-options="x for x in names" style="width: 200px;">
+</select>
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+<th id = "header">   Additional Comments</th>
+
+
+
+<td id = "header">
+
+
+
+
+</td>
+
+
+
+
+</tr>
+
+
+<tr>
+<td>  Add any additional comments that you wish to
+provide</td>
+
+
+
+<td>
+
+<INPUT    ng-model="additionalcomments" name="Additional_Comments"  style="height:60px;font-size:14pt"  /><BR>
+
+
+</td>
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</div>
+
+<input  class ="buttons" type="submit" value="Submit" />
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
